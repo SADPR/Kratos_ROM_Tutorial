@@ -1,0 +1,119 @@
+Begin Properties 0
+
+End Properties
+
+Begin Nodes
+	25	0.0000000000e+00	1.0000000000e+01	0.0000000000e+00
+	27	0.0000000000e+00	9.8000000000e+00	0.0000000000e+00
+	134	3.0717967700e-01	6.0000000000e+00	0.0000000000e+00
+	137	4.8038475770e-01	5.9000000000e+00	0.0000000000e+00
+	141	3.0717967700e-01	5.8000000000e+00	0.0000000000e+00
+	325	1.0000000000e+00	4.0000000000e-01	0.0000000000e+00
+	327	8.5265910470e-01	3.5063029290e-01	0.0000000000e+00
+	328	0.0000000000e+00	4.0000000000e-01	0.0000000000e+00
+	330	1.8371091030e-01	2.8480327930e-01	0.0000000000e+00
+	332	1.0000000000e+00	2.0000000000e-01	0.0000000000e+00
+	334	0.0000000000e+00	2.0000000000e-01	0.0000000000e+00
+	335	1.0000000000e+00	0.0000000000e+00	0.0000000000e+00
+	336	8.0000000000e-01	0.0000000000e+00	0.0000000000e+00
+End Nodes
+
+Begin Elements	SmallDisplacementElement2D3N
+	36	0	141	137	134	
+	476	0	330	328	334	
+	491	0	325	327	332	
+	515	0	336	335	332	
+End Elements
+
+Begin Conditions	SmallDisplacementLineLoadCondition2D2N
+	7	0	25	27	
+End Conditions
+
+Begin SubModelPart	Parts_Solid_Solid_Auto1
+	Begin SubModelPartData
+	End SubModelPartData
+	Begin SubModelPartTables
+	End SubModelPartTables
+	Begin SubModelPartNodes
+		25
+		27
+		134
+		137
+		141
+		325
+		327
+		328
+		330
+		332
+		334
+		335
+		336
+	End SubModelPartNodes
+	Begin SubModelPartElements
+		36
+		476
+		491
+		515
+	End SubModelPartElements
+	Begin SubModelPartConditions
+	End SubModelPartConditions
+End SubModelPart	
+
+Begin SubModelPart	DISPLACEMENT_Displacement_Auto1
+	Begin SubModelPartData
+	End SubModelPartData
+	Begin SubModelPartTables
+	End SubModelPartTables
+	Begin SubModelPartNodes
+		335
+		336
+	End SubModelPartNodes
+	Begin SubModelPartElements
+	End SubModelPartElements
+	Begin SubModelPartConditions
+	End SubModelPartConditions
+End SubModelPart	
+
+Begin SubModelPart	LinePressure2D_Pressure_on_lines_Auto1
+	Begin SubModelPartData
+	End SubModelPartData
+	Begin SubModelPartTables
+	End SubModelPartTables
+	Begin SubModelPartNodes
+		25
+	End SubModelPartNodes
+	Begin SubModelPartElements
+	End SubModelPartElements
+	Begin SubModelPartConditions
+	End SubModelPartConditions
+End SubModelPart	
+
+Begin SubModelPart	LinePressure2D_Pressure_on_lines_Auto2
+	Begin SubModelPartData
+	End SubModelPartData
+	Begin SubModelPartTables
+	End SubModelPartTables
+	Begin SubModelPartNodes
+		25
+		27
+	End SubModelPartNodes
+	Begin SubModelPartElements
+	End SubModelPartElements
+	Begin SubModelPartConditions
+		7
+	End SubModelPartConditions
+End SubModelPart	
+
+Begin SubModelPart	LinePressure2D_Pressure_on_lines_Auto3
+	Begin SubModelPartData
+	End SubModelPartData
+	Begin SubModelPartTables
+	End SubModelPartTables
+	Begin SubModelPartNodes
+	End SubModelPartNodes
+	Begin SubModelPartElements
+	End SubModelPartElements
+	Begin SubModelPartConditions
+	End SubModelPartConditions
+End SubModelPart	
+
